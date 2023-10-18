@@ -45,9 +45,9 @@ app.get('/projectsdata/:projectname', (req, res) => {
 
 app.use('/projects/:projectname', express.static('public/projects/:projectname'));
 
-// app.setting('query parser', (str) => {
-//     return qs.parse(str);
-// })
+app.setting('query parser', (str) => {
+    return qs.parse(str);
+})
 
 app.listen(3000, () => {
     console.log("app is listening at localhost:3000");
